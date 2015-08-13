@@ -19,6 +19,12 @@ namespace Services
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "CustomerManagementNoParameters",
+                routeTemplate: "CustomerManagement",
+                defaults: new { controller = "CustomerManagement" }
+            );
         }
     }
 }
